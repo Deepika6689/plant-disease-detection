@@ -76,7 +76,7 @@ streamlit run main.py
 ### 1️⃣ Preprocessing
 This image shows the preprocessing steps applied to the input leaf images, such as resizing, normalization, and augmentation:
 
-![Preprocessing1](Media/preprocessing1.png)
+![Preprocessing](Media/Preprocessing1.png)
 
 ### 2️⃣ Prediction
 This image shows a sample prediction output from the model after uploading a leaf image:
