@@ -71,6 +71,18 @@ streamlit run main.py
 ```
 **Note:** The key Python package versions used are specified in `requirements.txt`, including: tensorflow>=2.3.1, numpy>=1.18.5, keras>=2.4.3, streamlit>=1.27.1, opencv-python>=4.7.0.68, matplotlib>=3.3.2, scikit-learn>=0.9, and flask>=1.1.2.
 
+## 🖼 Workflow & Results
+
+### 1️⃣ Preprocessing
+This image shows the preprocessing steps applied to the input leaf images, such as resizing, normalization, and augmentation:
+
+![Preprocessing](Media/preprocessing.png)
+
+### 2️⃣ Prediction
+This image shows a sample prediction output from the model after uploading a leaf image:
+
+![Prediction](Media/prediction.png)
+
 🙋‍♀️ Author
 Made with ❤️ by Deepika
 
