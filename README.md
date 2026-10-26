@@ -1,90 +1,153 @@
+<div align="center">
+
 # 🌿 Plant Disease Detection
 
-## 📖 About the Project
+### AI-powered leaf disease classification for smarter, healthier crops
 
-**Plant Disease Detection** is a deep learning application designed to identify and classify **33 different types of leaf diseases** from images. The goal is to provide a fast, efficient, and user-friendly tool that helps farmers, agronomists, and agricultural researchers to detect diseases early, reduce crop loss, and improve yield.
-
-This system is powered by **transfer learning**, utilizing pre-trained CNN architectures like VGG16, ResNet, or EfficientNet. The web-based interface is built with **Streamlit**, allowing users to upload images and get predictions instantly.
-
----
-
-### 🔍 Key Features:
-- Detects **33 plant leaf diseases**
-- User-friendly **Streamlit web app**
-- Uses **pre-trained CNNs** for high accuracy
-- **OpenCV** used for image preprocessing
-- Easy to deploy and extend
-
-
-
-## 🚀 Tech Stack & Tools
-
-![Python](https://img.shields.io/badge/-PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Keras](https://img.shields.io/badge/-Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
+</div>
+
+---
+
+## 📖 Overview
+
+**Plant Disease Detection** is a deep learning application that identifies and classifies **33 types of plant leaf conditions** (healthy and diseased) from a single image. It helps farmers, agronomists, and agricultural researchers **detect diseases early, reduce crop loss, and improve yield**.
+
+The model is built with **transfer learning** on pre-trained CNN architectures (VGG16, ResNet, EfficientNet), and served through a simple **Streamlit** web interface: upload a leaf image, get a prediction instantly.
+
+---
+
+## ✨ Key Features
+
+- 🍃 **33-class classification** across healthy and diseased leaves
+- 🧠 **Transfer learning** with pre-trained CNNs for strong accuracy with less training data
+- 🖼️ **OpenCV preprocessing** (resizing, normalization, augmentation)
+- 🌐 **Streamlit web app** with instant, upload-and-predict workflow
+- 🔧 **Easy to deploy and extend** with a modular project structure
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Tools |
+|---|---|
+| Language | Python |
+| Deep Learning | TensorFlow, Keras |
+| Image Processing | OpenCV |
+| Web App | Streamlit |
+| Utilities | NumPy, Matplotlib, scikit-learn, Flask |
+
 ---
 
 ## 📁 Project Structure
-```
-├── API/       # Contains API-related scripts or modules
-├── Media/     # Store media assets (images, screenshots, etc.)
-├── Training/  # Contains model training scripts and notebooks
-├── .gitignore # Specifies intentionally untracked files to ignore
-├── README.md  # Project documentation
-├── app.py     # One version of the Streamlit/Flask app
-├── app1.py    # Possibly an alternate or test version of the app
-├── main.py    # Main Streamlit app (entry point)
-├── webapp.py  # Additional or legacy web app version
-├── requirements.txt # List of Python dependencies
 
 ```
+plant-disease-detection/
+├── API/               # API-related scripts and modules
+├── Media/             # Screenshots and other media assets
+├── Training/          # Model training scripts and notebooks
+├── app.py             # App version (Streamlit/Flask)
+├── app1.py            # Alternate / test version of the app
+├── main.py            # Main Streamlit app (entry point)
+├── webapp.py          # Additional / legacy web app version
+├── requirements.txt   # Python dependencies
+└── README.md
+```
+
 ---
 
-📚 Dataset
-The dataset contains:
+## 📚 Dataset
 
-Images of healthy and diseased leaves
+- Images of **healthy and diseased leaves**
+- **33 labeled categories**
+- Preprocessed for training and evaluation
 
-33 labeled categories
+---
 
-Preprocessed for training and evaluation
+## 🔄 Workflow
 
-📌 Future Scope
-Integration with mobile camera apps
+```
+Upload Image → Preprocess (OpenCV) → CNN Model (Transfer Learning) → Predicted Disease Class
+```
 
-Real-time disease alert systems
+---
 
-Integration with weather data and soil info for precision agriculture
+## ⚙️ Installation & Usage
 
-## 📦 Installation & Usage
+**1. Clone the repository**
 
-1.Clone the repo and install dependencies:
+```bash
+git clone https://github.com/Deepika6689/plant-disease-detection.git
+cd plant-disease-detection
+```
+
+**2. (Optional) Create a virtual environment**
+
+```bash
+python -m venv venv
+source venv/bin/activate      # Windows: venv\Scripts\activate
+```
+
+**3. Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
-2.Run the app using Streamlit:
-```
+
+**4. Run the app**
+
+```bash
 streamlit run main.py
 ```
-**Note:** The key Python package versions used are specified in `requirements.txt`, including: tensorflow>=2.3.1, numpy>=1.18.5, keras>=2.4.3, streamlit>=1.27.1, opencv-python>=4.7.0.68, matplotlib>=3.3.2, scikit-learn>=0.9, and flask>=1.1.2.
 
-## 🖼 Workflow & Results
+Then open the local URL shown in your terminal (usually `http://localhost:8501`).
+
+> **Note:** Key package versions are listed in `requirements.txt`: `tensorflow>=2.3.1`, `numpy>=1.18.5`, `keras>=2.4.3`, `streamlit>=1.27.1`, `opencv-python>=4.7.0.68`, `matplotlib>=3.3.2`, `scikit-learn>=0.9`, `flask>=1.1.2`.
+
+---
+
+## 🖼️ Results
 
 ### 1️⃣ Preprocessing
-This image shows the preprocessing steps applied to the input leaf images, such as resizing, normalization, and augmentation:
+Input leaf images are resized, normalized, and augmented before being passed to the model.
 
 ![Preprocessing](Media/Preprocessing1.png)
 
 ### 2️⃣ Prediction
-This image shows a sample prediction output from the model after uploading a leaf image:
+Sample output after uploading a leaf image to the app.
 
 ![Prediction](Media/prediction.png)
 
-🙋‍♀️ Author
-Made with ❤️ by Deepika
+---
 
-Feel free to connect or contribute!
+## 🔮 Future Scope
 
+- [ ] Mobile camera app integration
+- [ ] Real-time disease alert system
+- [ ] Integration with weather and soil data for precision agriculture
+- [ ] Treatment and prevention recommendations per detected disease
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to fork the repo and open a pull request.
+
+---
+
+## 👩‍💻 Author
+
+**Deepika Sajjan**
+GitHub: [@Deepika6689](https://github.com/Deepika6689)
+
+<div align="center">
+
+If you found this project useful, consider giving it a ⭐
+
+</div>
